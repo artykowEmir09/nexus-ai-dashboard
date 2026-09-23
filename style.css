@@ -724,3 +724,256 @@ footer {
         font-size: 35px;
     }
 }
+
+/* ================================
+   AUTHENTICATION
+================================ */
+
+.auth-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 45px;
+
+    background: rgba(10, 18, 30, 0.85);
+
+    border: 1px solid rgba(0, 234, 255, 0.3);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 0 40px rgba(0, 234, 255, 0.12);
+
+    animation: authEnter 0.8s ease;
+}
+
+@keyframes authEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.auth-box .logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-box h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.auth-box > p {
+    text-align: center;
+    color: #8493a8;
+    margin-bottom: 30px;
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-box input {
+    width: 100%;
+
+    padding: 16px;
+
+    background: #07101d;
+
+    border: 1px solid #22344c;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+.auth-box input:focus {
+    outline: none;
+
+    border-color: #00eaff;
+
+    box-shadow:
+        0 0 15px rgba(0, 234, 255, 0.2);
+}
+
+.auth-box button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.auth-link {
+    margin-top: 25px !important;
+}
+
+.auth-link a {
+    color: #00eaff;
+    text-decoration: none;
+}
+
+.message,
+.error {
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    border-radius: 7px;
+
+    background: rgba(0, 234, 255, 0.08);
+
+    border: 1px solid rgba(0, 234, 255, 0.3);
+
+    color: #00eaff;
+}
+
+
+/* ================================
+   DASHBOARD
+================================ */
+
+.dashboard-page,
+.admin-page {
+    min-height: 100vh;
+
+    padding: 150px 8% 80px;
+}
+
+.dashboard-page > h1,
+.admin-page > h1 {
+    font-size: clamp(45px, 6vw, 80px);
+
+    max-width: 900px;
+
+    margin: 20px 0;
+}
+
+.dashboard-page > h1 span,
+.admin-page > h1 span {
+    display: block;
+
+    color: #00eaff;
+
+    text-shadow:
+        0 0 15px #00eaff,
+        0 0 40px rgba(0, 234, 255, 0.5);
+}
+
+.dashboard-page > p:not(.status),
+.admin-page > p:not(.status) {
+    color: #8d9caf;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+.dashboard-info,
+.admin-stat {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+}
+
+.admin-stat {
+    grid-template-columns: 300px;
+}
+
+
+/* ================================
+   USERS TABLE
+================================ */
+
+.users-table {
+    margin-top: 60px;
+
+    overflow-x: auto;
+}
+
+.users-table h2 {
+    text-align: left;
+
+    margin-bottom: 25px;
+
+    color: #00eaff;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: rgba(10, 18, 30, 0.7);
+
+    border: 1px solid #1b2b42;
+}
+
+th,
+td {
+    padding: 16px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #1b2b42;
+}
+
+th {
+    color: #00eaff;
+
+    background: #07101d;
+}
+
+td {
+    color: #aeb9c8;
+}
+
+tr:hover td {
+    background: rgba(0, 234, 255, 0.04);
+}
+
+
+@media (max-width: 800px) {
+
+    .dashboard-info,
+    .admin-stat {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-stat {
+        width: 100%;
+    }
+
+    .auth-box {
+        padding: 30px 20px;
+    }
+
+}
+
